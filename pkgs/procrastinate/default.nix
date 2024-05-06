@@ -17,7 +17,7 @@ rustPlatform.buildRustPackage rec {
         description = "A suite of programs to send time delayed notifications";
         homepage = "https://www.github.com/Wasabi375/procrastinate";
         license = licenses.mit;
-        platforms = with platforms; linux ++ windows;
+        platforms = platforms.linux;
         mainProgram = "procrastinate";
     };
 }
