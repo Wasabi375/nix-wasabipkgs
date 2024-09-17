@@ -2,16 +2,16 @@
 
 rustPlatform.buildRustPackage rec {
     pname = "procrastinate";
-    version = "0.3.2";
+    version = "v0.4.0";
 
     src = fetchFromGitHub {
         owner = "Wasabi375";
         repo = pname;
         rev = version;
-        hash = "sha256-PnrcBXn+pelVzQGGTcpGF9I69y6uxclAABilIPAzwao=";
+        hash = "sha256-KvPAyFIg9PmT8MuPix3DvDUH2ebXSkW4iKlBRMlhn0M=";
     };
     
-    cargoHash = "sha256-6aN9I/eSqF7LxytKLSlTnNz30hrxVcfPuZCiRFAgWtE=";
+    cargoHash = "sha256-Tpev2lRjLO9rOVxkxojppmVUVRgidicW1Tck2pRBmAQ=";
 
     meta = with lib; {
         description = "A suite of programs to send time delayed notifications";
