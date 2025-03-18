@@ -31,12 +31,20 @@ in stdenv.mkDerivation {
 
     installPhase = ''
         runHook preInstall
+        
         mkdir -p $out/bin
         ln -s ${cli}/bin/procrastinate $out/bin/procrastinate
         ln -s ${daemon}/bin/procrastinate-daemon $out/bin/procrastinate-daemon
         ln -s ${work}/bin/procrastinate-work $out/bin/procrastinate-work
+      
+        mkdir -p $out/share/man/man1
         ${xtask}/bin/xtask --out-dir $out man
-        ${xtask}/bin/xtask --out-dir $out completion
+        mv $out/man/* $out/share/man/man1
+        
+        mkdir -p $out/share/bash-completion/completions
+        ${xtask}/bin/xtask --out-dir $out completion bash
+        mv $out/completions/* $out/share/bash-completion/completions
+       
         runHook postInstall
     '';
 
