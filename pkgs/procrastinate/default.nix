@@ -12,7 +12,7 @@ let
            hash = "sha256-5VR/k9vSrOnAyszOvXNmaneER9dkOhsevhNQTFNBrDU=";
        };
        
-       cargoHash = "sha256-/OzgMkK3Em9SJD7NYUgmOu89E4j/FSAGfHa6Mj1AYnQ=";
+       cargoHash = "sha256-r8Xn23rfi5jJjwMhTqEn8sst7WEmTBm+1Xpja5Qq82A=";
    
        buildAndTestSubdir = "${member}";
     };
