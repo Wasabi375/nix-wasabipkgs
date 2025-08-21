@@ -1,7 +1,7 @@
 {
-  description = "My personal NUR repository";
+  description = "My personal nix repository";
   inputs = {
-    nixpkgs.url = "nixpkgs/nixos-24.11";
+    nixpkgs.url = "nixpkgs/nixos-25.05";
     unstable.url = "nixpkgs/nixos-unstable";
   };
   

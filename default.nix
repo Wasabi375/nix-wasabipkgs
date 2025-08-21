@@ -16,4 +16,5 @@
 
   procrastinate = pkgs.callPackage ./pkgs/procrastinate {};
   vscode_codicons = pkgs.callPackage ./pkgs/fonts/vscode-codicons {};
+  cosmic-conductor = pkgs.callPackage ./pkgs/cosmic-conductor {};
 }
