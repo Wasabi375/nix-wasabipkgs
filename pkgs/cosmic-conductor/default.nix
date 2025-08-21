@@ -1,6 +1,6 @@
 {lib, pkgs, pkg-config, stdenv, fetchFromGitHub, rustPlatform}:
 let 
-    version = "41565f6200f5d79698c6c0883754a3573d0ecf87";
+    version = "v0.1.0";
     proc-bin = member: rustPlatform.buildRustPackage rec {
        pname = "cosmic-conductor";
        inherit version;
@@ -9,7 +9,7 @@ let
            owner = "Wasabi375";
            repo = pname;
            rev = version;
-           hash = "sha256-CEX01/oYh3n5/bPz08lDb12oeLm1OONH1LZdddr4IJQ=";
+           hash = "sha256-ON2FwQk32QdNWFl93x91jionBf7WX2+8KZUnZ1WYDbI=";
        };
        
        cargoHash = "sha256-ZwyAzNR3TqzX1Z35Jtw1lJOSqu3YWTT96cLu+RMVpEs=";
@@ -31,12 +31,10 @@ in stdenv.mkDerivation {
     pname = "cosmic-conductor";
     inherit version;
 
-
     unpackPhase = ''
         runHook preUnpack
         runHook postUnpack
     '';
-
 
     installPhase = ''
         runHook preInstall
